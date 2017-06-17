@@ -1,5 +1,8 @@
 # A Weatherapp for the SHA2017 Badge
 
+## Testing/Running
+For this to work you will ned an API Key from darksky.net
+
 ## Icons
 clear-day: f00d
 clear-night: f02e
