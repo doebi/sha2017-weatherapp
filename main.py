@@ -11,11 +11,6 @@ sta_if.isconnected()
 badge.init()
 ugfx.init()
 
-def renderIcon(x, y):
-    for xi in range(64):
-        for yi in range(64):
-            ugfx.pixel(xi + x, yi + y, 0)
-
 
 # loading screen
 ugfx.clear();
@@ -45,10 +40,10 @@ ugfx.string(240, 20, "NIGHT", "Roboto_Regular12", 0)
 #for point in data["hourly"]["data"]:
 #    print(point["icon"])
 
-renderIcon(5, 59)
-renderIcon(5 + 1*10 + 1* 64, 59)
-renderIcon(5 + 2*10 + 2* 64, 59)
-renderIcon(5 + 3*10 + 3* 64, 59)
+ugfx.box(5, 59, 64, 64, 0)
+ugfx.box(5 + 1*10 + 1* 64, 59, 64, 64, 0)
+ugfx.box(5 + 2*10 + 2* 64, 59, 64, 64, 0)
+ugfx.box(5 + 3*10 + 3* 64, 59, 64, 64, 0)
 
 
 ugfx.flush();
