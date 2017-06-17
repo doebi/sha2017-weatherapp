@@ -62,39 +62,43 @@ if starttime[3] > 18:
 
 timepos = (10, 30)
 iconpos = (10, 44)
-temppos = (0, 100)
+temppos = (10, 105)
 
 # displaying forecast
 ugfx.clear();
 ugfx.line(0, 26, 296, 26, 0)
 ugfx.line(0, 44, 296, 44, 0)
-ugfx.string(5, 5, "Weather Forecast for: Zeewolde, NL", "pixelade13", 0)
+ugfx.string(5, 5, "Weather Forecast for Zeewolde, NL", "pixelade13", 0)
 
 dp = hourly[index]
 time = localtime(dp["time"])
 ugfx.string(timepos[0], timepos[1], getDisplayName(time), "pixelade13", 0)
 ugfx.string(iconpos[0], iconpos[1], icons[dp["icon"]], "weather42", 0)
-ugfx.string(temppos[0], temppos[1], str(int(dp["temperature"]))+"°C", "DejaVuSansMono20", 0)
+ugfx.string(temppos[0], temppos[1], str(int(dp["temperature"]))+"°C", "DejaVuSans20", 0)
 
 dp = hourly[index+6]
 time = localtime(dp["time"])
 ugfx.string(timepos[0] + 1*11 + 1*64, timepos[1], getDisplayName(time), "pixelade13", 0)
 ugfx.string(iconpos[0] + 1*11 + 1*64, iconpos[1], icons[dp["icon"]], "weather42", 0)
-ugfx.string(temppos[0] + 1*11 + 1*64, temppos[1], str(int(dp["temperature"]))+"°C", "DejaVuSansMono20", 0)
+ugfx.string(temppos[0] + 1*11 + 1*64, temppos[1], str(int(dp["temperature"]))+"°C", "DejaVuSans20", 0)
 
 dp = hourly[index+12]
 time = localtime(dp["time"])
 ugfx.string(timepos[0] + 2*11 + 2*64, timepos[1], getDisplayName(time), "pixelade13", 0)
 ugfx.string(iconpos[0] + 2*11 + 2*64, iconpos[1], icons[dp["icon"]], "weather42", 0)
-ugfx.string(temppos[0] + 2*11 + 2*64, temppos[1], str(int(dp["temperature"]))+"°C", "DejaVuSansMono20", 0)
+ugfx.string(temppos[0] + 2*11 + 2*64, temppos[1], str(int(dp["temperature"]))+"°C", "DejaVuSans20", 0)
 
 dp = hourly[index+18]
 time = localtime(dp["time"])
 ugfx.string(timepos[0] + 3*11 + 3*64, timepos[1], getDisplayName(time), "pixelade13", 0)
 ugfx.string(iconpos[0] + 3*11 + 3*64, iconpos[1], icons[dp["icon"]], "weather42", 0)
-ugfx.string(temppos[0] + 3*11 + 3*64, temppos[1], str(int(dp["temperature"]))+"°C", "DejaVuSansMono20", 0)
+ugfx.string(temppos[0] + 3*11 + 3*64, temppos[1], str(int(dp["temperature"]))+"°C", "DejaVuSans20", 0)
 
 ugfx.flush();
+
+#ugfx.clear();
+#ugfx.string(10,10,"SHA2017 ¯\_(ツ)_/¯","pixelade13", 0)
+#ugfx.flush()
 
 while True:
     pass
