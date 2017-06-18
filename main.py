@@ -1,15 +1,9 @@
-import network, badge, ugfx, json
+import ugfx, json
 from time import *
 import urequests as requests
 
 apikey = ""
 
-sta_if = network.WLAN(network.STA_IF);
-sta_if.active(True)
-sta_if.connect("revspace-pub-2.4ghz")
-sta_if.isconnected()
-
-badge.init()
 ugfx.init()
 
 icons = {
@@ -95,10 +89,6 @@ ugfx.string(iconpos[0] + 3*11 + 3*64, iconpos[1], icons[dp["icon"]], "weather42"
 ugfx.string(temppos[0] + 3*11 + 3*64, temppos[1], str(int(dp["temperature"]))+"°C", "DejaVuSans20", 0)
 
 ugfx.flush();
-
-#ugfx.clear();
-#ugfx.string(10,10,"SHA2017 ¯\_(ツ)_/¯","pixelade13", 0)
-#ugfx.flush()
 
 while True:
     pass
