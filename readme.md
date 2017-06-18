@@ -1,5 +1,7 @@
 # A Weatherapp for the SHA2017 Badge
 
+![](http://i.imgur.com/7WitJAz.png)
+
 ## Testing/Running
 For this to work you will ned an API Key from darksky.net
 
