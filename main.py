@@ -45,6 +45,7 @@ r.close()
 # aligning according to time
 hourly = data["hourly"]["data"]
 starttime = localtime(hourly[0]["time"])
+index = 6 - starttime[3]
 if starttime[3] > 6:
     index = 12 - starttime[3]
 
@@ -54,14 +55,14 @@ if starttime[3] > 12:
 if starttime[3] > 18:
     index = 24 - starttime[3]
 
-timepos = (10, 30)
+timepos = (10, 26)
 iconpos = (10, 44)
 temppos = (10, 105)
 
 # displaying forecast
 ugfx.clear();
-ugfx.line(0, 26, 296, 26, 0)
-ugfx.line(0, 44, 296, 44, 0)
+ugfx.line(0, timepos[1]-4, 296, timepos[1]-4, 0)
+ugfx.line(0, timepos[1]+14, 296, timepos[1]+14, 0)
 ugfx.string(5, 5, "Weather Forecast for Zeewolde, NL", "pixelade13", 0)
 
 dp = hourly[index]
